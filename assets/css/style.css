@@ -1,0 +1,177 @@
+/*
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+### Font
+
+- Family: [Inter](https://fonts.google.com/specimen/Inter)
+- Weights: 400, 700, 800
+*/
+
+html {
+    font-size: 15px;
+}
+
+:root {
+    --soft-orange:hsl(35, 77%, 62%);
+    --soft-red:hsl(5, 85%, 63%);
+    --off-white: hsl(36, 100%, 99%);
+    --grayish-blue: hsl(233, 8%, 79%);
+    --dark-grayish-blue: hsl(236, 13%, 42%);
+    --very-dark-blue: hsl(240, 100%, 5%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--off-white);
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Inter', sans-serif;
+}
+
+/*Base End*/
+
+/*Helper*/
+.w-100 {
+    width: 100%;
+}
+
+/*Helper End*/
+/*Nav*/
+
+nav,
+.container {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+nav {
+    margin-top: 80px;
+    display: flex; /*bütün öğeleri yan yana getirmek için display:flex kullandım.*/
+    justify-content: space-between; /*öğeler arası boşluk oluşturmak için bu kodu kullandım.*/
+}
+
+nav > ul {
+    list-style: none;
+    display: flex;
+    gap: 35px; /*Araya 35px boşluk bırakmak için bu kodu yazdım.*/
+}
+
+nav > ul > li > a {
+    text-decoration: none;
+    color: var(--dark-grayish-blue);
+}
+
+nav > ul > li > a:hover {
+    text-decoration: underline;
+}
+
+/*Nav End*/
+
+/*aside*/
+
+.container {
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap; /*arastir*/
+    gap: 50px;
+}
+
+.container > section {
+    flex: 2;
+}
+
+.container > aside {
+    flex: 1;
+    background-color: var(--very-dark-blue);
+    padding: 20px;
+}
+
+.container > aside > h2 {
+    color: var(--soft-orange);
+    margin-top: 10px;
+    font-size: 2rem;
+}
+
+aside > .item {
+    margin-bottom: 20px;
+}
+
+aside > .item > h3 {
+    color: var(--off-white);
+}
+
+aside > .item > p {
+    color: var(--grayish-blue);
+}
+
+.info {
+    display: flex;
+    gap: 50px;
+}
+
+.info h1 {
+    font-size: 4rem;
+    margin: 20px 0 0;
+}
+
+.info > .item {
+    flex: 1;
+}
+
+.item-detail {
+    margin-top: 20px;
+}
+
+.item-detail > a.btn {
+    margin-top: 40px;
+    padding: 10px 30px;
+    background-color: var(--soft-red);
+    display: inline-block;
+    color: var(--off-white);
+    text-decoration: none;
+}
+
+/*aside end*/
+
+/*footer*/
+
+footer.container > .item {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer.container > .item > img {
+    width: 100px;
+    max-height: 120px
+}
+
+footer.container > .item > div {
+    flex: 2;
+    padding: 0 20px;
+}
+
+footer.container > .item h3 {
+    margin: 0;
+    color: var(--grayish-blue);
+}
+
+footer.container > .item h4 {
+    margin: 10px 0 0;
+}
+
+footer.container > .item p {
+    color: var(--very-dark-blue);
+}
+
+/*footer end*/
